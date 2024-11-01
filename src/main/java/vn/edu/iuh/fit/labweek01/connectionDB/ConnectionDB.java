@@ -11,5 +11,20 @@ package vn.edu.iuh.fit.labweek01.connectionDB;
  * @date: 10/31/2024
  */
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class ConnectionDB {
+    public Connection connection;
+
+    public Connection getConnection() {
+        try {
+            Class.forName("org.mariadb.jdbc.Driver");
+            String url = "jdbc:mariadb://localhost:3306/mydb";
+            connection = DriverManager.getConnection(url,"root", "root");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return connection;
+    }
 }

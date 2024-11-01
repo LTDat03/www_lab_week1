@@ -11,5 +11,15 @@ package vn.edu.iuh.fit.labweek01.repositories;
  * @date: 10/31/2024
  */
 
+import vn.edu.iuh.fit.labweek01.models.Account;
+
+import java.util.List;
+import java.util.Optional;
+
 public interface AccountRepository {
+    public boolean createAccount(Account account);
+    public boolean updateAccount(Account account);
+    public boolean deleteAccount(Account account);
+    public List<Account> findAll();
+    public Optional<Account> findById(String id);
 }

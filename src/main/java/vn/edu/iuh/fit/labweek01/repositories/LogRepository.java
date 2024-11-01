@@ -11,5 +11,14 @@ package vn.edu.iuh.fit.labweek01.repositories;
  * @date: 10/31/2024
  */
 
+import vn.edu.iuh.fit.labweek01.models.Log;
+
+import java.util.List;
+import java.util.Optional;
+
 public interface LogRepository {
+    public boolean createLog(Log log);
+    public boolean updateLog(Log log);
+    public boolean deleteLog(Log log);
+    public List<Log> findAll();
 }
